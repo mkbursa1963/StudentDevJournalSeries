@@ -1,21 +1,90 @@
-# StudentDevJournal – JWT Modülü
+📘 StudentDevJournal 
 
-Bu repository, bir bilgisayar mühendisi tarafından hazırlanan eğitim serisinin ilk modülüdür.  
-Proje, JWT (JSON Web Token) tabanlı kimlik doğrulamanın temel çalışma mantığını ve katmanlı backend mimarisini örnek bir yapı üzerinden göstermeyi amaçlar.
+Bu repository, bir bilgisayar mühendisi tarafından hazırlanan backend geliştirme eğitim serisinin ilk modülünü temsil eder.
+Amaç, modern backend uygulamalarında kullanılan JWT tabanlı kimlik doğrulama, yetkilendirme ve güvenli şifre yönetimi kavramlarını adım adım öğretmektir.
 
-Bu modülde; token üretimi, token doğrulama ve protected route kavramları ele alınmaktadır.  
-Veritabanı entegrasyonu, kullanıcı yönetimi ve ileri seviye güvenlik senaryoları bu modülün kapsamı dışındadır ve serinin ilerleyen bölümlerinde ele alınacaktır.
+Proje, katmanlı mimari prensiplerine uygun olarak yapılandırılmıştır ve eğitim boyunca kademeli olarak geliştirilmektedir.
 
----
+📅 Gün 1 – JWT Authentication Temelleri
 
-## Projeyi Yerel Ortamda Çalıştırma
+Eğitim serisinin ilk gününde aşağıdaki konular ele alınmıştır:
+
+JWT (JSON Web Token) çalışma mantığı
+
+Access Token üretimi
+
+Token doğrulama (verify)
+
+Middleware kullanımı
+
+Protected route kavramı
+
+Katmanlı backend mimarisi (routes, controllers, services, middlewares)
+
+Bu aşamada kullanıcı verileri in-memory olarak tutulmakta olup, odak noktası JWT’nin temel mantığını kavramaktır.
+
+📅 Gün 2 – Authorization & Password Security
+
+İkinci günde, sistem gerçek dünya senaryolarına bir adım daha yaklaştırılmıştır.
+
+Bu modülde ele alınan başlıca konular:
+
+Role-Based Access Control (RBAC)
+
+student / admin rol yapısı
+
+Yetkilendirme middleware’i
+
+JWT payload içerisinde rol bilgisinin taşınması
+
+bcrypt ile şifre güvenliği
+
+Şifrelerin hashlenerek saklanması
+
+Plaintext şifre kullanımının kaldırılması
+
+Authentication & Authorization ayrımı
+
+Güvenli login akışı
+
+Bu güncelleme ile birlikte sistem, temel güvenlik standartlarına uygun hale getirilmiştir.
+
+🚧 Kapsam Dışı Konular
+
+Aşağıdaki konular bu modülün kapsamı dışındadır ve eğitim serisinin ilerleyen bölümlerinde ele alınacaktır:
+
+Veritabanı entegrasyonu (MongoDB / PostgreSQL)
+
+Refresh Token mekanizması
+
+Logout & token iptali
+
+Rate limiting & brute-force koruması
+
+Auth testleri (Jest)
+
+Gelişmiş güvenlik senaryoları
+
+▶️ Projeyi Yerel Ortamda Çalıştırma
 
 Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları sırasıyla uygulayın.
 
-### 1. Ortam Değişkenleri
+1. Ortam Değişkenleri
 
-Proje yapılandırmaları ortam değişkenleri üzerinden yönetilmektedir.  
-`.env.example` dosyasını kullanarak bir `.env` dosyası oluşturun:
+Proje yapılandırmaları ortam değişkenleri üzerinden yönetilmektedir.
+.env.example dosyasını kullanarak bir .env dosyası oluşturun:
 
-```bash
 cp .env.example .env
+
+🎯 Eğitim Serisinin Amacı
+
+Bu repository bir hazır template değil,
+bir geliştiricinin backend dünyasında bilinçli ve sağlam temellerle ilerlemesini hedefleyen eğitim serisinin parçasıdır.
+
+Her gün eklenen özellikler:
+
+Bilinçli olarak sınırlı tutulur
+
+Gerçek dünya senaryolarına dayanır
+
+Bir sonraki adıma zemin hazırlar
