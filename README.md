@@ -1,33 +1,55 @@
-📘 StudentDevJournal 
+📘 StudentDevJournal
 
-Bu repository, bir bilgisayar mühendisi tarafından hazırlanan backend geliştirme eğitim serisinin ilk modülünü temsil eder.
-Amaç, modern backend uygulamalarında kullanılan JWT tabanlı kimlik doğrulama, yetkilendirme ve güvenli şifre yönetimi kavramlarını adım adım öğretmektir.
+StudentDevJournal, bir bilgisayar mühendisinin backend geliştirme yolculuğunu adım adım belgelediği eğitim serisidir.
+Bu repository, serinin ilk modülünü temsil eder.
 
-Proje, katmanlı mimari prensiplerine uygun olarak yapılandırılmıştır ve eğitim boyunca kademeli olarak geliştirilmektedir.
+🎯 Amaç
+
+Modern backend uygulamalarında kullanılan aşağıdaki temel kavramları,
+teoriden kopmadan ve kod yazarak öğretmeyi amaçlar:
+
+JWT tabanlı kimlik doğrulama (Authentication)
+
+Yetkilendirme (Authorization)
+
+Güvenli şifre yönetimi (Password Security)
+
+Proje, katmanlı mimari (layered architecture) prensiplerine uygun şekilde yapılandırılmıştır ve her gün kontrollü olarak geliştirilmektedir.
 
 📅 Gün 1 – JWT Authentication Temelleri
 
-Eğitim serisinin ilk gününde aşağıdaki konular ele alınmıştır:
+Eğitim serisinin ilk gününde JWT’nin temel çalışma mantığı ele alınmıştır.
 
-JWT (JSON Web Token) çalışma mantığı
+İşlenen Konular
+
+JWT (JSON Web Token) nedir, nasıl çalışır
 
 Access Token üretimi
 
 Token doğrulama (verify)
 
-Middleware kullanımı
+Middleware mantığı
 
 Protected route kavramı
 
-Katmanlı backend mimarisi (routes, controllers, services, middlewares)
+Katmanlı backend mimarisi:
 
-Bu aşamada kullanıcı verileri in-memory olarak tutulmakta olup, odak noktası JWT’nin temel mantığını kavramaktır.
+routes
+
+controllers
+
+services
+
+middlewares
+
+📌 Bu aşamada kullanıcı verileri in-memory olarak tutulmaktadır.
+Odak noktası, JWT’nin temel mantığını net bir şekilde kavramaktır.
 
 📅 Gün 2 – Authorization & Password Security
 
-İkinci günde, sistem gerçek dünya senaryolarına bir adım daha yaklaştırılmıştır.
+İkinci günde sistem, gerçek dünya senaryolarına bir adım daha yaklaştırılmıştır.
 
-Bu modülde ele alınan başlıca konular:
+🔐 Authorization
 
 Role-Based Access Control (RBAC)
 
@@ -37,21 +59,25 @@ Yetkilendirme middleware’i
 
 JWT payload içerisinde rol bilgisinin taşınması
 
-bcrypt ile şifre güvenliği
+🔒 Password Security
 
-Şifrelerin hashlenerek saklanması
+bcrypt ile şifre hashleme
 
-Plaintext şifre kullanımının kaldırılması
+Şifrelerin güvenli şekilde saklanması
 
-Authentication & Authorization ayrımı
+Plaintext şifre kullanımının tamamen kaldırılması
+
+🧠 Kavramsal Ayrımlar
+
+Authentication vs Authorization farkı
 
 Güvenli login akışı
 
-Bu güncelleme ile birlikte sistem, temel güvenlik standartlarına uygun hale getirilmiştir.
+Bu güncelleme ile birlikte proje, temel backend güvenlik standartlarına uygun hale getirilmiştir.
 
 🚧 Kapsam Dışı Konular
 
-Aşağıdaki konular bu modülün kapsamı dışındadır ve eğitim serisinin ilerleyen bölümlerinde ele alınacaktır:
+Aşağıdaki konular bu modülün kapsamı dışındadır ve eğitim serisinin ilerleyen günlerinde ele alınacaktır:
 
 Veritabanı entegrasyonu (MongoDB / PostgreSQL)
 
@@ -61,27 +87,41 @@ Logout & token iptali
 
 Rate limiting & brute-force koruması
 
-Auth testleri (Jest)
+Authentication testleri (Jest)
 
 Gelişmiş güvenlik senaryoları
 
 ▶️ Projeyi Yerel Ortamda Çalıştırma
 
-Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları sırasıyla uygulayın.
+Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyin.
 
-1. Ortam Değişkenleri
+1️⃣ Ortam Değişkenleri
 
 Proje yapılandırmaları ortam değişkenleri üzerinden yönetilmektedir.
 .env.example dosyasını kullanarak bir .env dosyası oluşturun:
 
+```bash
 cp .env.example .env
+```
+
+Bu komut, örnek ortam değişkenleri dosyasını kopyalayarak
+uygulamanın çalışması için gerekli .env dosyasını oluşturur.
 
 🎯 Eğitim Serisinin Amacı
 
-Bu repository bir hazır template değil,
-bir geliştiricinin backend dünyasında bilinçli ve sağlam temellerle ilerlemesini hedefleyen eğitim serisinin parçasıdır.
+Bu repository bir hazır template değildir.
 
-Her gün eklenen özellikler:
+Bir geliştiricinin:
+
+Backend dünyasında sağlam temellerle ilerlemesini
+
+Güvenlik kavramlarını doğru yerde ve doğru şekilde öğrenmesini
+
+“Kopyala–yapıştır” yerine neden–sonuç ilişkisi kurmasını
+
+amaçlayan bir eğitim serisinin parçasıdır.
+
+🔹 Her gün eklenen özellikler:
 
 Bilinçli olarak sınırlı tutulur
 
